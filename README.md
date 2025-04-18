@@ -50,12 +50,13 @@ Example file (tabular format):
 count	freq	cdr3nt	cdr3aa	v	d	j	VEnd	DStart	DEnd	JStart
 161853	0.009385105218213133	TGTGCCAGTTCGTCGTCTAGCTCCTACAATGAGCAGTTCTTC	CASSSSSSYNEQFF	TRBV6-4	.	TRBJ2-1	7	-1	-1	18
 ...
+```
 
 ## Basic Usage
 
 ```bash
-python3 TCRfeatureCal.py -m /extdata/metadata.tsv -o output_features/
-python3 diversity_vdjtools_wrapper.py -m metadata.txt -o outout_diversity -x 10000000
+python TCRfeatureCal.py -m /extdata/metadata.tsv -o output_features/
+python diversity_vdjtools_wrapper.py -m /extdata/metadata.txt -o outout_diversity/ -x 10000000
 ```
 
 Output includes:
