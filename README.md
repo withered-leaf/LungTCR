@@ -49,6 +49,8 @@ Example file (tabular format):
 ```
 count	freq	cdr3nt	cdr3aa	v	d	j	VEnd	DStart	DEnd	JStart
 161853	0.009385105218213133	TGTGCCAGTTCGTCGTCTAGCTCCTACAATGAGCAGTTCTTC	CASSSSSSYNEQFF	TRBV6-4	.	TRBJ2-1	7	-1	-1	18
+128851	0.007471472215355789	TGTGCCAGCTCACCATAGGACAGTGCTTCTCTGGAAACACCATATATTTT	CASSP*DS_FSGNTIYF	TRBV18	TRBD1	TRBJ1-3	14	17	22	28
+107730	0.006246763329429179	TGTGCCAGCAGTTACGGTCTAAGAGATACGCAGTATTTT	CASSYGLRDTQYF	TRBV6-5	.	TRBJ2-3	14	-1	-1	23
 ...
 ```
 
@@ -57,6 +59,7 @@ count	freq	cdr3nt	cdr3aa	v	d	j	VEnd	DStart	DEnd	JStart
 ```bash
 python TCRfeatureCal.py -m /extdata/metadata.tsv -o output_features/
 python diversity_vdjtools_wrapper.py -m /extdata/metadata.txt -o outout_diversity/ -x 10000000
+Rscript LungTCR_ModelPrediction.R -i /extdata/test.csv -o output_model/ -m /model/models_list.rds -f /model/SelectedFeatures.csv 
 ```
 
 Output includes:
@@ -66,7 +69,9 @@ Output includes:
 - CDR3 length distributions
 - CDR3 amino acid compositions
 - TCR clones frequency distributions
+- TCR convergence index
 - Lung cancer enrichment score
+- Lung cancer prediction result
 
 
 
